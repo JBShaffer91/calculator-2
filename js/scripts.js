@@ -139,6 +139,15 @@ function convertVolume(unit, value) {
 
 //Convert gallons to liters //
 
+unit = prompt("Enter a unit of measurement (gallons):");
+value = parseInt(prompt("Enter a value:"));
+if (isNaN(value)) {
+  saySomething("Invalid value entered");
+} else {
+  outputText = "The value in liters is: " + convertVolume(unit, value);
+  saySomething(outputText);
+}
+
 function convertVolume(unit, value) {
   if (unit === 'gallons') {
       return gallonsToLiters(value);
